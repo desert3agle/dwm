@@ -26,7 +26,7 @@ static const int vertpadbar  	    = 7; 	/* vertical padding for statusbar */
 #include "/home/khoya_musafir/.cache/wal/colors-wal-dwm.h"
 
 static const char *fonts[]          = { 
-	"DejaVu Sans:size:pixelsize=16:antialias=true:autohint=true",
+	"DejaVu Sans:size:pixelsize=14:antialias=true:autohint=true",
     "Font Awesome 5 Free Solid:size:pixelsize=13:antialias=true:autohint=true"
 };
 
@@ -34,6 +34,7 @@ static const char *fonts[]          = {
 
 
 /* tagging */
+//static const char *tags[] = { "1", "2", "3", "4", "5", "6",  "7", "8", "9" };
 static const char *tags[] = { "", "︁", "︁", "︁", "︁", "", "︁", "︁", "︁" };
 
 static const Rule rules[] = {
@@ -56,12 +57,15 @@ static int attachbelow = 1;    /* 1 means attach at the end */
 
 #include "gaplessgrid.c"
 
+
+// default : []=, [M], ###, ><>
+
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "[M]",      monocle },
-	{ "###",      gaplessgrid },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "",      tile },    /* first entry is default */
+	{ "",      monocle },
+	{ "",      gaplessgrid },
+	{ "",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
